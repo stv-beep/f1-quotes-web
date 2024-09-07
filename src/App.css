@@ -2,7 +2,7 @@
   background-image: url('./assets/bg.jpg');
 }
 
-.authorsSection {
+.bg-grad {
   background-image: linear-gradient(294deg, #f7f7f8, #f9f9fb 14%, #faf8fb 20%, #f9f5fa 24%, #faf4fa 29%, #fcf3f9 33%, #fef5fa 36%, #fff5f9 40%, #deebe7 43%, #fff0f3 47%, #fff0f0 50%, #fff1f0 53%, #ebddd9 57%, #fff1eb 60%, #fff0e6 64%, #ffefe0 67%, #fff1e0 71%, #fff1db 76%, #fff3db 80%, #fcf3da 86%, #f7f4d9);
 }
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 import mockQuotes from '../data/mockQuotes.json'
 import mockPeople from '../data/mockPeople.json'
+import Loading from "../components/Loading";
 
 function HomePage() {
 
@@ -46,7 +47,7 @@ function HomePage() {
     }, []);
 
     return (
-        <div className="authorsSection">
+        <div className="bg-grad">
             <section className="box py-6">
                 
                 <div className="w-3/4 p-5 rounded-lg backdrop-blur-md bg-gray-800/40">
@@ -71,7 +72,7 @@ function HomePage() {
                             }
                         </div>
 
-                    : 'Loading...'}
+                    : <Loading/>}
 
                 </div>
 
@@ -87,20 +88,17 @@ function HomePage() {
                         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-1">
                             {
                                 people.map(person => (
-                                    <Link key={person.id} to={`/person/${person.id}`} className="block overflow-hidden authorLink">
+                                    <Link key={person.id} to={`/person/${person.id}`} className="block overflow-hidden authorLink rounded-lg hover:scale-105 hover:z-10 duration-300 ease-in-out transition hover:opacity-90">
                                         <img src={person.img} alt={person.name} className="w-[999px] h-[100%] object-cover" />
                                         <div className="detail ">
                                             <h3 className="text-white text-2xl font-extrabold my-4 text-center">{person.name}</h3>
                                         </div>
-                                        
                                     </Link>
                                 ))
                             }
                         </div>
-
-
-                        : 'Loading...'
-                    
+                        
+                        : <Loading/>                  
                     }
 
                 </div>
