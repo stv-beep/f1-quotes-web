@@ -43,7 +43,7 @@ function PersonQuotesPage() {
         <div className="bg-grad">
             <section className="py-6">
                 
-                <div className="w-3/4 p-5 rounded-lg backdrop-blur-md bg-gray-800/60">
+                <div className="max-[767px]:w-11/12 md:w-3/4 p-5 rounded-lg backdrop-blur-md bg-gray-800/60">
 
                     {person ?
                         <div className="person-info text-center mb-6">
@@ -65,7 +65,7 @@ function PersonQuotesPage() {
                             {
                                 quotes.map(quote => (
                                     <div key={quote.id} className="my-5">
-                                        <p className="text-white text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-300 to-yellow-400">
+                                        <p className="text-white max-[767px]:text-xl md:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-300 to-yellow-400">
                                             <span className="text-yellow-400 text-3xl">"</span>
                                             {quote.quote}
                                             <span className="text-yellow-400 text-3xl">"</span>

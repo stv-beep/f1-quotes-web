@@ -50,7 +50,7 @@ function HomePage() {
         <div className="bg-grad">
             <section className="box py-6">
                 
-                <div className="w-3/4 p-5 rounded-lg backdrop-blur-md bg-gray-800/40">
+                <div className="max-[767px]:w-11/12 md:w-3/4 p-5 rounded-lg backdrop-blur-md bg-gray-800/40">
                     <h2 className="text-white text-5xl mb-3 font-extrabold">Some topic quotes</h2>
 
                     {data ? 
@@ -59,13 +59,13 @@ function HomePage() {
                             {
                                 data.map(quote => (
                                     <div key={quote.id} className="my-5">
-                                        <p className="text-white text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-300 to-yellow-400">
+                                        <p className="text-white max-[767px]:text-xl md:text-2xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-500 via-yellow-300 to-yellow-400">
                                             <span className="text-yellow-400 text-3xl">"</span>
                                             {quote.quote}
                                             <span className="text-yellow-400 text-3xl">"</span>
                                         </p>
 
-                                        <p className="text-white text-xl">- {quote.author}</p>
+                                        <p className="text-white max-[767px]:text-lg md:text-xl">- {quote.author}</p>
                                         
                                     </div>
                                 ))
@@ -80,7 +80,7 @@ function HomePage() {
 
             <section className="py-6">
                 
-                <div className="w-3/4 p-5 rounded-lg backdrop-blur-md bg-gray-800/40 ">
+                <div className="max-[767px]:w-11/12 md:w-3/4 p-5 rounded-lg backdrop-blur-md bg-gray-800/40 ">
                     <h2 className="text-white text-5xl mb-6 font-extrabold">Drivers</h2>
 
                     {people ?
@@ -89,9 +89,9 @@ function HomePage() {
                             {
                                 people.map(person => (
                                     <Link key={person.id} to={`/person/${person.id}`} className="block overflow-hidden authorLink rounded-lg hover:scale-105 hover:z-10 duration-300 ease-in-out transition hover:opacity-90">
-                                        <img src={person.img} alt={person.name} className="w-[999px] h-[100%] object-cover" />
-                                        <div className="detail ">
-                                            <h3 className="text-white text-2xl font-extrabold my-4 text-center">{person.name}</h3>
+                                        <img src={person.img} alt={person.name} loading="lazy" className="w-[999px] h-[100%] object-cover" />
+                                        <div className="detail">
+                                            <h3 className="text-white max-[767px]:text-base md:text-2xl font-extrabold max-[767px]:my-2 md:my-4 text-center">{person.name}</h3>
                                         </div>
                                     </Link>
                                 ))
